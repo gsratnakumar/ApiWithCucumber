@@ -1,0 +1,110 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-08-27T15:13:44.953Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3012000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.test.stepdefinition.Hooks.beforeGetPlace()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Verify Get place reponse",
+        "description": "",
+        "id": "verify-addplace-api;verify-get-place-reponse",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Place id with query parameters",
+            "match": {
+              "location": "com.test.stepdefinition.PlaceAPIStepDefinition.place_id_with_query_parameters()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2118000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "hit \"GetPlaceAPI\" resource with http request \"GET\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "GetPlaceAPI",
+                  "offset": 5
+                },
+                {
+                  "val": "GET",
+                  "offset": 46
+                }
+              ],
+              "location": "com.test.stepdefinition.PlaceAPIStepDefinition.whenHitApi(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Verify status code \"200\" and get response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "com.test.stepdefinition.PlaceAPIStepDefinition.thenGetPlaceResponce(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 13000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Deserializ the \"Get place\" response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Get place",
+                  "offset": 16
+                }
+              ],
+              "location": "com.test.stepdefinition.PlaceAPIStepDefinition.deserializResponse(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@GetPlace"
+          }
+        ]
+      }
+    ],
+    "name": "Verify AddPlace API",
+    "description": "",
+    "id": "verify-addplace-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/com/test/feature/PlaceDemo.feature",
+    "tags": []
+  }
+]
